@@ -187,7 +187,7 @@ class DataTrainingArguments:
         metadata={"help": "The total number of augmented unanswerable samples"},
     )
     human_generated_file: Optional[str] = field(
-        default='/nethome/mzhang/Project/UQA/data/squad2.json', metadata={"help": "The default SQuAD2.0 training set."}
+        default='squad2.json', metadata={"help": "The default SQuAD2.0 training set."}
     )
 
     def __post_init__(self):

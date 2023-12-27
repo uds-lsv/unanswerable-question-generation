@@ -9,7 +9,7 @@ SEED=42
 
 MODEL=bert-large-cased
 
-TRAIN_FILE=squad_all.json
+TRAIN_FILE=squad_all.json  # e.g., original data + augmentations
 VAL_FILE=valid.json
 
 OUTPUT_DIR=checkpoints/
@@ -31,5 +31,8 @@ python run_qa.py \
     --save_steps 5000 \
     --seed $SEED  \
     --overwrite_output_dir \
-    --num_aug_sample 100
+    --num_aug_sample 100 \
+    --human_generated_file squad2.json   
 
+# squad2.json: the original SQuAD2.0 data 
+# It is used to filter out the augmented unanswerable data and then sample a subset from it.
