@@ -1,0 +1,4 @@
+transformers==4.27.0
+datasets
+evaluate
+sentencepiece
